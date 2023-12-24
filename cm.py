@@ -223,6 +223,55 @@ def char_mars():
         for row in baca_csv:
             print(row)
             
+def char_bumi():
+
+    with open("DataMars.csv",mode="r") as csv_file:
+        baca_csv = csv.reader(csv_file, delimiter="\n")
+        for row in baca_csv:
+            print(row)
+            
+def char_merkurius():
+
+    with open("DataMars.csv",mode="r") as csv_file:
+        baca_csv = csv.reader(csv_file, delimiter="\n")
+        for row in baca_csv:
+            print(row)
+
+def char_saturnus():
+
+    with open("DataMars.csv",mode="r") as csv_file:
+        baca_csv = csv.reader(csv_file, delimiter="\n")
+        for row in baca_csv:
+            print(row)
+            
+def char_uranus():
+
+    with open("DataMars.csv",mode="r") as csv_file:
+        baca_csv = csv.reader(csv_file, delimiter="\n")
+        for row in baca_csv:
+            print(row)
+            
+def char_neptunus():
+
+    with open("DataMars.csv",mode="r") as csv_file:
+        baca_csv = csv.reader(csv_file, delimiter="\n")
+        for row in baca_csv:
+            print(row)
+            
+def char_jupiter():
+
+    with open("DataMars.csv",mode="r") as csv_file:
+        baca_csv = csv.reader(csv_file, delimiter="\n")
+        for row in baca_csv:
+            print(row)
+
+def char_venus():
+    
+    with open("DataMars.csv",mode="r") as csv_file:
+        baca_csv = csv.reader(csv_file, delimiter="\n")
+        for row in baca_csv:
+            print(row)
+            
 print("""
              ================= Choose ================= 
              [A] Animasi Planet
@@ -248,13 +297,31 @@ print("""
           """)
     
 menu_planet = input("Planet apa yang ingin Anda ketahui?")
+def planet_option():
+    if menu_planet == "1":
+        char_mars()
+    elif menu_planet == "2":
+        char_bumi()
+    elif menu_planet =="3":
+        char_merkurius
+    elif menu_planet == "4":
+        char_saturnus()
+    elif menu_planet =="5":
+        char_uranus()
+    elif menu_planet == "6":
+        char_neptunus()
+    elif menu_planet =="7":
+        char_jupiter()    
+    elif menu_planet == "8":
+        char_venus()
+    else:
+        print("Please input based on list")
+        
+planet_option()
 
-if menu_planet == "1":
-    char_mars()
+if menu_planet != "1" or "2"or "3" or "4" or "5" or "6" or "6" or "7" or "8":
+        menu_planet = input("Please input the correct option :")
+        
+        planet_option()
 else:
-    print("Data out of dated")
-
-    
-    
-    
-    
+    print("Thank You")
